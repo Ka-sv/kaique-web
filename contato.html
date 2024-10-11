@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Kaique</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="caixa">
+            <a href="#secao-principal" aria-label="Logo Ksilva Projetos">
+                <img src="logo-fundo-preto.png" alt="Logo Ksilva Projetos">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="index.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <form action="enviar.php" method="POST">
+            <label for="nomesobrenome">Nome e sobrenome</label>
+            <input type="text" id="nomesobrenome" name="nome_completo" class="input-padrao" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" class="input-padrao" required placeholder="Exemplo: nome@dominio.com">
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX" ">
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" class="input-padrao" cols="70" rows="10" required></textarea>
+
+            <fieldset>
+                <legend>Como prefere o nosso contato?</legend>
+                <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">E-mail</label>
+                <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
+                <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Qual horário prefere ser atendido?</legend>
+                <select id="horario-preferido" name="horario-preferido">
+                    <option value="manha">Manhã</option>
+                    <option value="tarde">Tarde</option>
+                    <option value="noite">Noite</option>
+                </select>
+            </fieldset>
+
+            <label class="checkbox"><input type="checkbox" name="novidades" checked>Gostaria de receber nossas novidades por e-mail?</label>
+
+            <input type="submit" value="Enviar formulário" class="enviar" aria-label="Enviar formulário de contato">
+        </form>
+
+        <a href="https://api.whatsapp.com/send?phone=5511965779827" class="whatsapp-button" target="_blank" aria-label="Entre em contato pelo WhatsApp">
+            <img src="./icone2-whatsApp.jpg" alt="Ícone do WhatsApp para contato" class="whatsapp-icon">
+        </a>
+    </main>
+
+    <footer>
+        <img src="logo-fundo-preto.png" alt="Logo Ksilva Projetos">
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Perfil do LinkedIn de Kaique">
+            <img src="linkedin.jpg" alt="Logo do LinkedIn">
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="Perfil do GitHub de Kaique">
+            <img src="github.jpg" alt="Logo do GitHub">
+        </a>
+        <p class="copyright">&copy; Copyright Ksilva - 2022</p>
+    </footer>
+
+    <!-- EmailJS script -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init('seu_user_id'); // Substitua 'seu_user_id' pelo seu ID de usuário do EmailJS
+        })();
+    </script>
+
+    <!-- Main JS -->
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+/* Reset básico para remover margens e paddings padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilização do header */
+header {
+    background-color: #000; /* Fundo preto para o header */
+    padding: 10px 0; /* Reduzindo o padding */
+    min-height: auto; /* Para que o header se ajuste à altura dos elementos */
+}
+
+.caixa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px; /* Define uma altura mínima alinhada aos elementos */
+}
+
+.caixa img {
+    width: 120px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Espaçamento entre os links */
+}
+
+nav ul li a {
+    color: #fff; /* Cor dos links em branco */
+    text-decoration: none;
+    padding: 8px 12px; /* Ajuste de padding para reduzir altura */
+    font-weight: bold;
+    transition: background 0.3s ease; /* Efeito de transição para hover */
+}
+
+
+/* Efeito hover nos links */
+nav ul li a:hover {
+    background-color: #444; /* Fundo cinza escuro ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas nos links ao passar o mouse */
+}
+
+/* Efeito de foco nos links para acessibilidade */
+nav ul li a:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Estilização do conteúdo principal */
+.principal {
+    padding: 50px;
+    text-align: center;
+}
+
+.titulo-principal {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.principal img.utensilios {
+    width: 300px;
+    height: auto;
+    margin: 20px 0;
+}
+
+/* Botão do WhatsApp fixo no canto inferior direito */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Para garantir que o botão apareça acima de outros elementos */
+    background-color: #25D366;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o mouse */
+}
+
+.whatsapp-icon {
+    width: 50px;
+    height: auto;
+}
+
+/* Seção do mapa */
+.mapa {
+    padding: 40px;
+    text-align: center;
+}
+
+.mapa-conteudo iframe {
+    max-width: 100%;
+    border: none;
+    margin-top: 20px;
+}
+
+/* Seção de benefícios */
+.beneficios {
+    background-color: #fff;
+    padding: 50px;
+    text-align: left;
+    transition: background 0.3s ease;
+}
+
+.beneficios:hover {
+    background-color: #f0f0f0; /* Suave mudança de cor ao passar o mouse */
+}
+
+.conteudo-beneficios {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lista-beneficios {
+    flex: 1;
+}
+
+.lista-beneficios li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.imagem-beneficios {
+    width: 400px;
+    height: auto;
+}
+
+/* Estilização do rodapé */
+/* Estilização do rodapé */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer img {
+    width: 50px; /* Tamanho uniforme para os ícones */
+    height: auto;
+    margin: 0 10px; /* Espaçamento entre as imagens */
+    vertical-align: middle; /* Alinhamento vertical das imagens com o texto */
+    transition: transform 0.3s ease; /* Animação suave para os ícones */
+}
+
+footer img:hover {
+    transform: scale(2.1); /* Efeito de zoom ao passar o mouse nos ícones */
+}
+
+footer p {
+    margin-top: 15px; /* Espaçamento entre os ícones e o texto */
+    font-size: 0.9em; /* Tamanho menor para o texto de copyright */
+}
+
+
+
+/* Media query para responsividade */
+@media (max-width: 768px) {
+    .principal {
+        padding: 20px;
+    }
+
+    .titulo-principal {
+        font-size: 2em;
+    }
+
+    .principal img.utensilios {
+        width: 200px;
+    }
+
+    .conteudo-beneficios {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagem-beneficios {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        padding: 8px 12px;
+    }
+    
+    /* Botão do WhatsApp em dispositivos móveis */
+    .whatsapp-button {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px;
+    }
+
+    .whatsapp-icon {
+        width: 40px;
+    }
+}
+
+/* Estilo geral do formulário */
+form {
+    max-width: 600px; /* Limite a largura do formulário */
+    margin: 20px auto; /* Centraliza o formulário na página */
+    padding: 20px; /* Adiciona preenchimento */
+    border: 1px solid #ddd; /* Borda leve */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #f9f9f9; /* Cor de fundo suave */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombreamento */
+}
+
+/* Estilo dos inputs e textarea */
+.input-padrao {
+    width: 100%; /* Preenche toda a largura do contêiner */
+    padding: 10px; /* Preenchimento interno */
+    margin-bottom: 15px; /* Espaçamento entre os campos */
+    border: 1px solid #ccc; /* Borda leve */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: border-color 0.3s; /* Transição suave */
+}
+
+.input-padrao:focus {
+    border-color: #007BFF; /* Muda a cor da borda ao focar */
+    outline: none; /* Remove contorno padrão */
+}
+
+/* Estilo dos fieldsets */
+fieldset {
+    border: 1px solid #007BFF; /* Borda azul */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px; /* Preenchimento */
+    margin-bottom: 20px; /* Espaçamento abaixo do fieldset */
+}
+
+/* Estilo do botão de enviar */
+.enviar {
+    background-color: #007BFF; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    padding: 10px 15px; /* Preenchimento */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.enviar:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo da checkbox */
+.checkbox {
+    margin: 10px 0; /* Espaçamento */
+    display: block; /* Faz com que a checkbox ocupe a largura total */
+}
+
+fieldset legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
